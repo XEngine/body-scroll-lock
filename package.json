@@ -13,6 +13,13 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "types": "dist/bodyScrollLock.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/bodyScrollLock.es.js",
+      "require": "./dist/bodyScrollLock.cjs.js"
+    }
+  },
   "files": [
     "dist"
   ],
