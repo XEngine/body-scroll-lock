@@ -25,7 +25,7 @@
   "scripts": {
     "release": "npm version",
     "postrelease": "yarn publish && git push --follow-tags",
-    "build": "vite run build",
+    "build": "vite build",
     "prerelease": "npm run build"
   }
 }
