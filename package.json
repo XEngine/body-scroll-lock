@@ -5,7 +5,9 @@
   "main": "dist/bodyScrollLock.cjs.js",
   "module": "dist/bodyScrollLock.es.js",
   "author": "Will Po",
-  "repository": "https://github.com/willmcpo/body-scroll-lock.git",
+  "repository": {
+    "url": "git+https://github.com/willmcpo/body-scroll-lock.git"
+  },
   "private": false,
   "publishConfig": {
     "access": "public",
