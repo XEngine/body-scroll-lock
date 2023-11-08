@@ -18,14 +18,9 @@
     "vite-plugin-dts": "^3.6.3"
   },
   "scripts": {
-    "clean": "rimraf build",
     "release": "npm version",
     "postrelease": "yarn publish && git push --follow-tags",
-    "build": "npm run clean && tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
-    "build:esm": "npm run clean && tsc --lib DOM,DOM.Iterable,ES6 --target ES6 --outDir tsbuild && esbuild --bundle --outdir=lib --format=esm tsbuild/bodyScrollLock.js && echo 'aa'",
-    "buildModule": "esbuild --bundle --outdir=lib --format=esm src/bodyScrollLock.ts",
-    "buildEs6": "BABEL_ENV=es6 babel src/bodyScrollLock.ts > lib/bodyScrollLock.es6.js",
-    "buildUmd": "BABEL_ENV=umd babel src/bodyScrollLock.ts > lib/bodyScrollLock.js && uglifyjs --compress unused,dead_code --mangle reserved=['require','exports'] lib/bodyScrollLock.js > lib/bodyScrollLock.min.js",
-    "prerelease": "npm run clean && npm run build"
+    "build": "vite run build",
+    "prerelease": "npm run build"
   }
 }
