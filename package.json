@@ -6,6 +6,11 @@
   "module": "dist/bodyScrollLock.es.js",
   "author": "Will Po",
   "repository": "https://github.com/willmcpo/body-scroll-lock.git",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "files": [
     "dist"
   ],
